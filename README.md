@@ -4,5 +4,15 @@
  <source media="(prefers-color-scheme: light)" srcset="media/pong.gif">
  <img alt="pong" src="media/pong.gif">
 </picture>
-<br>
-web based pong game.
+<details>
+ ## Description
+ 
+<summary>**Need to have list**</summary>
+
+| Rank | Languages |
+|-----:|-----------|
+|     1| Javascript|
+|     2| Python    |
+|     3| SQL       |
+
+</details>
