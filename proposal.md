@@ -7,7 +7,12 @@
 
  ## Description
  A web based pong game where the website will contain
- the documentation for both the game and the website
+ the documentation for both the game and the website. The website itself will be made in html and css
+ while the pong game will be in javascript.
+ 
+ ## Look alikes?
+ There are currently thousands of webbased pong games, with the classic being the most common. Though our main game will include this version of pong,
+ it will be made by us, integrated into the website design aswell.
  
 ## Need to have's
 | Rank |                      Required                        |
