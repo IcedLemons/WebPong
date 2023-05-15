@@ -1,6 +1,5 @@
 .logo-container,
-.nav-links,
-.cart {
+.nav-links {
 	display: flex;
 }
 
