@@ -24,11 +24,18 @@ body {
 .sty {
     width: 100%;
     height: 100%;
-    background: url(media/yes.gif) no-repeat center fixed;
-    background-color: rgb(0, 0, 13);
+    min-height: 100vh;
+    background-size: cover;
     background-position: center;
-
-
+    background: url(media/yes.gif) no-repeat center fixed;
+}
+.bg {
+    background-color: rgb(0, 0, 13);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 header {
     padding: 40px 0 30px;
@@ -91,23 +98,7 @@ nav .nav-list li a{
     font-family: 'Press Start 2p', sans-serif;
 }
 nav .nav-list li:not(:last-child) a:hover{
-    color: ghostwhite;
-    transition: .4s;
-}
-nav .nav-list li.btn a{
-    display: inline-block;
-    background: transparent;
-    border: 2px solid ghostwhite;
-    padding: 9px 28px;
-    border-radius: 30px;
-    line-height: 1.3;
-    color: #8bd6f8;
-    font-weight: 700;
-}
-nav .nav-list li.btn:hover a{
-    background: ghostwhite;
-    color: white;
-    border: 2px solid transparent;
+    color: #FAC898;
     transition: .4s;
 }
 
