@@ -184,49 +184,6 @@ span{
     font-size: 12px;
 }
 
-/* PROJECT FILE CARD */
-.card{
-    width: 20%;
-    display: inline-block;
-    box-shadow: 2px 2px 20px black;
-    border-radius: 5px; 
-    margin: 2%;
-    align-items: center;
-    padding-bottom: 30px;
-}
-.image{
-    padding-top: 10px;
-}
-.image img{
-	width: 90%;   
-    border: 2.5px solid #8bd6f8;
-    border-radius: 10px;
-}
-.title {
-	text-align: center;
-	padding: 10px;
-    font-size: 10px;
-	color: black;
-}
-
-.des{
-	padding: 3px;
-	text-align: center;
-	padding-top: 10px;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-
-.noot{
-    margin-top: 40px;
-    margin-bottom: 10px;
-    border: 2px solid #8bd6f8;
-    border-radius: 5px;
-    padding:10px;
-    color: #8bd6f8;
-    font-size: 18px;
-	text-decoration: none;
-}
 
 /* MOBILE VERSION */
 @media screen and (max-width: 900px) {
@@ -261,13 +218,14 @@ span{
         right: -65%;
         bottom: 0;
         width: 40%;
-        height: 45%;
-        background: white;
+        height: 31.5%;
+        background: rgb(0, 0, 13);
         z-index: 2;
         padding: 6% 9%;
         transition: .3s right;
         border: 2px solid ghostwhite;
         border-radius: 10px;
+        margin-right: 2.5%;
     }
     nav .nav-list li{
         display: block;
@@ -280,24 +238,7 @@ span{
         margin-left: 0;
         margin-bottom: 40px;
     }
-    nav .nav-list li.btn a{
-        position: absolute;
-        bottom: 0%;
-        right: 20%;
-        left: 20%;
-        padding: 7px 15px;
-        font-size: 14px;
-    }
     nav .nav-list.open{
         right: 0;
-    }
-
-    /* PROJECT CARD BUTTONS */
-    .title{
-        font-size: 9.5px;
-    }
-    
-    .noot{
-        font-size: 14px;
     }
 }
