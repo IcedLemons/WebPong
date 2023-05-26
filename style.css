@@ -97,9 +97,10 @@ nav .nav-list li a{
     font-weight: 100;
     font-family: 'Press Start 2p', sans-serif;
 }
-nav .nav-list li:not(:last-child) a:hover{
+nav .nav-list li a:hover{
     color: #FAC898;
     transition: .4s;
+    font-size: 22px;
 }
 
 /* ON SCREEN TEXT (TITLE AND DESCRIPTION etc.) */
@@ -110,8 +111,7 @@ nav .nav-list li:not(:last-child) a:hover{
     margin-bottom: 40px;
 }
 .container .intro-text h2{
-    color: black;
-    font-size: 47px;
+    font-size: 40px;
     font-weight: 900;
     line-height: 1.2;
     margin: 20px 0px 20px;
@@ -120,7 +120,7 @@ span{
     color: whitesmoke;
 }
 .container .intro-text h1{
-    color: ghostwhite;
+    color: whitesmoke;
     font-weight: 400;
     font-size: 17px;
 }
@@ -128,7 +128,7 @@ span{
     width: 550px;
     max-width: 100%;
     color: ghostwhite;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.5;
     margin-bottom: 30px;
 }
@@ -156,9 +156,9 @@ span{
 
 /* MORE-ABOUT BUTTON */
 .container .intro-text button{
-    color: rgb(97, 97, 97);
+    color: rgb(0, 0, 13);
     background: ghostwhite;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 590;
     line-height: 24px;
     padding: 7px 20px;
@@ -178,6 +178,7 @@ span{
     margin-top: 300px;
     padding-bottom: 5px;
 }
+
 .bottom p{
     color: white;
     letter-spacing: 2px;
