@@ -66,3 +66,5 @@ Changelog for CS30 project, WebPong
 ### Added
 - Error page styling
 - Buttons on error page
+
+## 29
