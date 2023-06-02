@@ -37,6 +37,14 @@ body {
     background-size: cover;
     background-position: center;
 }
+.pong {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
 header {
     padding: 40px 0 30px;
     display: flex;
