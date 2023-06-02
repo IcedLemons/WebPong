@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
-
     <script src="https://kit.fontawesome.com/f7317a6980.js" crossorigin="anonymous"></script>
-
-    <title>WebPong</title>
     <link rel="icon" type="image/x-icon" href="media/fav.ico">
     <meta content="CS20" property="og:title">
     <meta content="Work of Art" property="og:description">
@@ -20,22 +16,26 @@
     <!-- <meta content="logo.png" property="og:image"> -->
     <meta content="#f28500" data-react-helmet="true" name="theme-color">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WebPong</title>
+    <script src="pong/main.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg">
-    <section class="sty">
+    <section>
         <div class="width">
             <header>
                 <div class="logo">
                     <a href="home.html"><i class="fa-solid fa-laptop-code"></i></a>
                 </div>
-
+        
                 <nav>
                     <div class="oui">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-
+        
                     <ul class="nav-list">
                         <li><a href="home.html">Home</a></li>
                         <li><a href="pong.html">Game</a></li>
@@ -43,37 +43,11 @@
                     </ul>
                 </nav>
             </header>
-
-            <div class="container">
-                <div class="intro-text">
-                    <h1>Hi There!</h1>
-                    <h2><span class="input"></span></h2>
-                    <p>" The critical ingredient is getting off your butt and doing something. "<br>- Nolan Bushnells, Inventor of Pong</p>
-                    <div class="media">
-                        <a href="https://www.instagram.com/campbellcollegiate/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://github.com/IcedLemons/WebPong" target="_blank"><i class="fa-brands fa-github-square"></i></a>
-                        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                    <a href="na.html"><button type="button">More About Me</button></a>
-                </div>
-                <div class="bottom">
-                    <p>ツ  2022 Input - Made By BenC</p>
-                </div>
-            </div>
         </div>
     </section>
 
-    <script type="text/javascript" src="js/script.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        var typed = new Typed(".input", {
-            strings:["Welcome to WebPong","A blast from the past.","The classic to enjoy."],
-            typeSpeed: 65,
-            backSpeed: 60,
-            loop:true
-        })
-    </script>
-    
+    <div id="ui">
+        <canvas id="canvas"></canvas>
+    </div>
 </body>
 </html>

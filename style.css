@@ -8,7 +8,7 @@
     text-decoration: none;
 }
 body {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .width {
     width: 1280px;
@@ -185,6 +185,17 @@ span{
     font-size: 12px;
 }
 
+#ui{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#canvas{
+    background-color: black;
+    outline: 1px solid #fff;
+    margin-bottom: 200px;
+}
 
 /* MOBILE VERSION */
 @media screen and (max-width: 900px) {
