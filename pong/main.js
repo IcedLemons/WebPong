@@ -13,7 +13,7 @@ const paddleSpeed = 5;
 // ball variables
 const ballRadius = 10;
 const angle = getRandomNumber(0, Math.PI * 2); // Random angle between 0 and 2*PI (360 degrees)
-let ballSpeed = 2;
+let ballSpeed = 4;
 
 let paddleLeft = {
   x: 10,
