@@ -39,6 +39,9 @@ let ball = {
   velocityY: Math.sin(angle) * ballSpeed
 };
 
+let scoreLeft = 0;
+let scoreRight = 0;
+
 window.onload = function () {
   let canvas = document.getElementById('canvas');
   canvas.height = HEIGHT;
@@ -93,22 +96,36 @@ function update() {
 
   // Detect if ball hits top or bottom of canvas
   if (ball.y <= 8 || ball.y + ball.radius >= HEIGHT) {
-    ballSpeed *= 1.5;
+    ballSpeed *= 1.1; // Increase ball speed upon collision with top or bottom
     ball.velocityY *= -1;
   }
 
   // check if collision happens
   if (detectCollision(ball, paddleLeft)) {
-    ballSpeed *= 1.5;
+    ballSpeed *= 1.1; // Increase ball speed upon collision with the left paddle
     if (ball.x - 80 <= paddleLeft.x) {
       ball.velocityX *= -1;
     }
   } else if (detectCollision(ball, paddleRight)) {
-    ballSpeed += 1;
+    ballSpeed *= 1.1; // Increase ball speed upon collision with the right paddle
     if (ball.x + 50 >= paddleRight.x) {
       ball.velocityX *= -1;
     }
   }
+
+  // Update scores
+  if (ball.x - ball.radius <= 0) {
+    scoreRight++;
+    resetBall();
+  } else if (ball.x + ball.radius >= WIDTH) {
+    scoreLeft++;
+    resetBall();
+  }
+
+  // Display scores
+  context.font = '20px Arial';
+  context.fillText('Left: ' + scoreLeft, 20, 30);
+  context.fillText('Right: ' + scoreRight, WIDTH - 100, 30);
 }
 
 function outOfBounds(yPosition) {
@@ -138,6 +155,15 @@ function movePaddle(e) {
       paddleRight.velocityY = 0;
     }
   });
+}
+
+function resetBall() {
+  ball.x = WIDTH / 2;
+  ball.y = HEIGHT / 2;
+  ballSpeed = 4;
+  angle = getRandomNumber(0, Math.PI * 2);
+  ball.velocityX = Math.cos(angle) * ballSpeed;
+  ball.velocityY = Math.sin(angle) * ballSpeed;
 }
 
 function getRandomNumber(min, max) {
