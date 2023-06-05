@@ -1,80 +1,61 @@
+import Paddle from './Paddle.js';
+import { createBall } from './Ball.js';
+
 // CONSTANT VARIABLES
 const WIDTH = 750;
 const HEIGHT = 450;
 let context;
 
-class Paddle {
-  constructor(x, y, width, height) {
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
-    this.velocityY = 0;
-    this.paddleSpeed = 5; // Added paddleSpeed variable
-  }
-
-  draw() {
-    context.fillStyle = '#fff';
-    context.fillRect(this.x, this.y, this.width, this.height);
-  }
-
-  update() {
-    const newY = this.y + this.velocityY;
-    if (!this.outOfBounds(newY)) {
-      this.y = newY;
-    }
-  }
-
-  moveUp() {
-    this.velocityY = -this.paddleSpeed;
-  }
-
-  moveDown() {
-    this.velocityY = this.paddleSpeed;
-  }
-
-  stop() {
-    this.velocityY = 0;
-  }
-
-  outOfBounds(yPosition) {
-    return yPosition < 0 || yPosition + this.height > HEIGHT;
-  }
-}
-
-class Ball {
-  constructor(x, y, radius, velocityX, velocityY) {
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.velocityX = velocityX;
-    this.velocityY = velocityY;
-  }
-
-  update() {
-    this.x += this.velocityX;
-    this.y += this.velocityY;
-
-    if (this.y <= this.radius || this.y + this.radius >= HEIGHT) {
-      this.velocityY *= -1;
-    }
-  }
-
-  draw() {
-    context.beginPath();
-    context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    context.fill();
-  }
-}
-
-let paddleLeft = new Paddle(10, HEIGHT / 2 - 35, 10, 70, 0);
-let paddleRight = new Paddle(WIDTH - 20, HEIGHT / 2 - 35, 10, 70, 0);
-let ball = createBall();
-
+let paddleLeft = new Paddle(10, HEIGHT / 2 - 35, 10, 70, HEIGHT);
+let paddleRight = new Paddle(WIDTH - 20, HEIGHT / 2 - 35, 10, 70, HEIGHT);
 let scoreLeft = 0;
 let scoreRight = 0;
+let ball = createBall(WIDTH, HEIGHT);
+
+// Speed increment value
+let SPEED_INCREMENT;
 
 window.onload = function () {
+  let user_diff_choice = prompt(
+    'The ball speed will increase in each collision, how diffcult do want this to be(0-5):'
+  );
+
+  while (user_diff_choice == '' || user_diff_choice == null) {
+    user_diff_choice = prompt(
+      'The ball speed will increase in each collision, how diffcult do want this to be(0-5):'
+    );
+  }
+
+  switch (parseInt(user_diff_choice)) {
+    case 0:
+      alert('hmmm...okay');
+      SPEED_INCREMENT = 0.2;
+      break;
+    case 1:
+      alert('Have fun!');
+      SPEED_INCREMENT = 0.5;
+      break;
+    case 2:
+      alert('Okay...I see you');
+      SPEED_INCREMENT = 1;
+      break;
+    case 3:
+      alert('Are you sure about this....Good luck');
+      SPEED_INCREMENT = 1.3;
+      break;
+    case 4:
+      alert('Almost impossible!');
+      SPEED_INCREMENT = 1.5;
+      break;
+    case 5:
+      alert('Impossible!');
+      SPEED_INCREMENT = 2;
+      break;
+    default:
+      alert('Unexpected answer. Setting difficulty level to default.');
+      SPEED_INCREMENT = 0.2;
+      break;
+  }
   let canvas = document.getElementById('canvas');
   canvas.height = HEIGHT;
   canvas.width = WIDTH;
@@ -84,34 +65,35 @@ window.onload = function () {
 
   // Listen for input
   document.addEventListener('keydown', movePaddle);
+  document.addEventListener('keyup', stopPaddle);
 };
 
 function update() {
-  requestAnimationFrame(update);
-
   // clear canvas
   context.clearRect(0, 0, WIDTH, HEIGHT);
 
   // Draw paddles
-  paddleLeft.draw();
-  paddleRight.draw();
+  paddleLeft.draw(context);
+  paddleRight.draw(context);
 
   // Update paddles
-  paddleLeft.update();
-  paddleRight.update();
+  paddleLeft.update(context);
+  paddleRight.update(context);
 
   // Draw ball
   ball.update();
-  ball.draw();
+  ball.draw(context);
 
   // Check for collisions
   if (detectCollision(ball, paddleLeft)) {
-    if (ball.x - 80 <= paddleLeft.x) {
+    if (ball.x - ball.radius <= paddleLeft.x + paddleLeft.width) {
       ball.velocityX *= -1;
+      increaseBallSpeed();
     }
   } else if (detectCollision(ball, paddleRight)) {
-    if (ball.x + 50 >= paddleRight.x) {
+    if (ball.x + ball.radius >= paddleRight.x) {
       ball.velocityX *= -1;
+      increaseBallSpeed();
     }
   }
 
@@ -128,6 +110,8 @@ function update() {
   context.font = '20px Arial';
   context.fillText('Left: ' + scoreLeft, 20, 30);
   context.fillText('Right: ' + scoreRight, WIDTH - 100, 30);
+
+  requestAnimationFrame(update);
 }
 
 function movePaddle(e) {
@@ -158,26 +142,8 @@ function stopPaddle(e) {
   }
 }
 
-// Listen for input
-document.addEventListener('keydown', movePaddle);
-document.addEventListener('keyup', stopPaddle);
-
 function resetBall() {
-  ball = createBall();
-}
-
-function createBall() {
-  const ballRadius = 10;
-  const angle = getRandomNumber(0, Math.PI * 2);
-  const ballSpeed = 4;
-  const angleOffset = getRandomNumber(-1, 1); // Random angle offset to introduce variation
-  const velocityX = Math.cos(angle + angleOffset) * ballSpeed;
-  const velocityY = Math.sin(angle + angleOffset) * ballSpeed;
-
-  return new Ball(WIDTH / 2, HEIGHT / 2, ballRadius, velocityX, velocityY);
-}
-function getRandomNumber(min, max) {
-  return Math.random() * (max - min) + min;
+  ball = createBall(WIDTH, HEIGHT);
 }
 
 function detectCollision(a, b) {
@@ -188,3 +154,11 @@ function detectCollision(a, b) {
     a.y + a.radius > b.y
   );
 }
+
+function increaseBallSpeed() {
+  // Increase ball speed by the speed increment value
+  ball.velocityX += Math.sign(ball.velocityX) * SPEED_INCREMENT;
+  ball.velocityY += Math.sign(ball.velocityY) * SPEED_INCREMENT;
+}
+
+export { WIDTH, HEIGHT };
