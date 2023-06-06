@@ -17,12 +17,12 @@ let SPEED_INCREMENT;
 
 window.onload = function () {
   let user_diff_choice = prompt(
-    'The ball speed will increase in each collision, how diffcult do want this to be(0-5):'
+    'Select a number from 1-5 for difficulty level:'
   );
 
   while (user_diff_choice == '' || user_diff_choice == null) {
     user_diff_choice = prompt(
-      'The ball speed will increase in each collision, how diffcult do want this to be(0-5):'
+      'Select a number from 1-5 for difficulty level:'
     );
   }
 

@@ -19,8 +19,9 @@ Changelog for CS30 project, WebPong
 ## 15/05/23
 
 ### Added
-- Base Pong game file
+- pong.html ( Display page for pong game )
 - Game Objects ( Paddle , Ball )
+- Main.js (Main js file for pong game)
 
 ## 20/05/23
 
@@ -28,6 +29,10 @@ Changelog for CS30 project, WebPong
 - index.html
 - Style.css
 - Basic text place holders
+- Paddle.js
+- Ball.js
+- Seperated Ball classes and functions from main file into ball.js file
+- Seperated Paddle classes and functions from main file into main.js file
 
 ## 22/05/23
 
@@ -55,16 +60,21 @@ Changelog for CS30 project, WebPong
 ### Added
 - Navbar styling
 - Button and Icon styling with animations
-- Javascript animation file for navbar
+- Javascript animation file for navbar responsivness
 - Heading text animation (Typewriter)
 
 ### Changed
 - Background animation
+- Pong game files into OOP
 
 ## 26/05/23
 
 ### Added
 - Error page styling
 - Buttons on error page
+- Integrated pong game into current webpage with navbar
 
-## 29
+## 31/05/23
+
+### Fixed
+- Ball not speeding up on impact
