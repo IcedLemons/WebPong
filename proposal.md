@@ -28,9 +28,7 @@
 |-----:|----------------------------------|
 |     1| Player vs AI                     |
 |     2| Sound effects                    |
-|     3| "powerups" for players to "grab" |
-|     4| Changable preset themes for pong |
-|     5| Top 10 all time leaderboard      |
+|     3| Top 10 all time leaderboard      |
 
 ## Target Audience
 A simple game targeted to those looking to explore and have a relaxing time.
