@@ -6,8 +6,8 @@ const WIDTH = 750;
 const HEIGHT = 450;
 let context;
 
-let paddleLeft = new Paddle(10, HEIGHT / 2 - 35, 10, 70, HEIGHT);
-let paddleRight = new Paddle(WIDTH - 20, HEIGHT / 2 - 35, 10, 70, HEIGHT);
+let paddleLeft = new Paddle(10, HEIGHT / 2 - 35, 10, 80, HEIGHT);
+let paddleRight = new Paddle(WIDTH - 20, HEIGHT / 2 - 35, 10, 80, HEIGHT);
 let scoreLeft = 0;
 let scoreRight = 0;
 let ball = createBall(WIDTH, HEIGHT);
