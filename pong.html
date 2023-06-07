@@ -2,58 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
-      rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/f7317a6980.js"
-      crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f7317a6980.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="media/fav.ico" />
-    <meta content="CS20" property="og:title" />
-    <meta content="Work of Art" property="og:description" />
-    <meta content="https://your-link-here(ben)" property="og:url" />
     <!-- <meta content="logo.png" property="og:image"> -->
-    <meta content="#f28500" data-react-helmet="true" name="theme-color" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-
+    <meta name="viewport"content="width=device-width, initial-scale=1.0" />
     <title>WebPong</title>
     <script src="js/main.js" type="module"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="pong">
-    <section>
-      <div class="width">
-        <header>
-          <div class="logo">
-            <a href="home.html"><i class="fa-solid fa-laptop-code"></i></a>
+    <div class="width">
+      <header>
+        <div class="logo">
+          <a href="home.html"><i class="fa-solid fa-laptop-code"></i></a>
+        </div>
+
+        <nav>
+          <div class="oui">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
 
-          <nav>
-            <div class="oui">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <ul class="nav-list">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="pong.html">Game</a></li>
-              <li><a href="404.html">About</a></li>
-            </ul>
-          </nav>
-        </header>
-      </div>
-    </section>
-
+          <ul class="nav-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="pong.html">Game</a></li>
+            <li><a href="gdd.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
     <div id="ui">
       <canvas id="canvas"></canvas>
     </div>
