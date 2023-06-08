@@ -113,7 +113,7 @@ nav .nav-list li a:hover{
 
 /* ON SCREEN TEXT (TITLE AND DESCRIPTION etc.) */
 .container{
-    padding-top: 160px;
+    padding-top: 17%;
 }
 .container .intro-text{
     margin-bottom: 40px;
@@ -123,6 +123,7 @@ nav .nav-list li a:hover{
     font-weight: 900;
     line-height: 1.2;
     margin: 20px 0px 20px;
+    color: whitesmoke;
 }
 span{
     color: whitesmoke;
@@ -140,7 +141,34 @@ span{
     line-height: 1.5;
     margin-bottom: 30px;
 }
-
+/* GDD TEXT STYLING */
+.gdd{
+    padding-top: 100px;
+}
+.gdd .intro-text{
+    margin-bottom: 40px;
+}
+.gdd .intro-text h1{
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 20px 0px 20px;
+    color: whitesmoke;
+    text-decoration: underline;
+}
+.gdd .intro-text h2{
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 15px;
+}
+.gdd .intro-text p{
+    width: 550px;
+    max-width: 100%;
+    color: ghostwhite;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
 /* SOCIAL MEDIA ICONS */
 .media a{
     width: 37px;
