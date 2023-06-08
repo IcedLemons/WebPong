@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
-body {
+#home {
     overflow: hidden;
 }
 .width {
@@ -152,14 +152,20 @@ span{
     font-size: 40px;
     font-weight: 900;
     line-height: 1.2;
-    margin: 20px 0px 20px;
+    margin: 20px 0px 0px;
     color: whitesmoke;
-    text-decoration: underline;
 }
 .gdd .intro-text h2{
     color: whitesmoke;
     font-weight: 400;
     font-size: 15px;
+    padding-bottom: 50px;
+}
+.gdd .intro-text h3{
+    color: whitesmoke;
+    font-weight: 650;
+    font-size: 20px;
+    text-decoration: underline;
 }
 .gdd .intro-text p{
     width: 550px;
