@@ -1,4 +1,4 @@
-/* CSS code styling the elements of a web page */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap");
 
 /* Resetting default styles */
 * {
@@ -7,6 +7,18 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+}
+#home {
+  overflow: hidden;
+}
+.width {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+.center {
+  text-align: center;
 }
 
 /* Styling the background */
@@ -18,8 +30,6 @@
   background-position: center;
   background: url(media/yes.gif) no-repeat center fixed;
 }
-
-/* Styling the background color */
 .bg {
   background-color: rgb(0, 0, 13);
   width: 100%;
@@ -28,7 +38,6 @@
   background-size: cover;
   background-position: center;
 }
-
 /* Styling the background for the Pong game */
 .pong {
   background-color: #000;
@@ -38,7 +47,6 @@
   background-size: cover;
   background-position: center;
 }
-
 /* Styling the header */
 header {
   padding: 40px 0 30px;
@@ -47,7 +55,6 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
 /* Styling the logo */
 .logo i {
   height: 55px;
@@ -62,8 +69,7 @@ header {
   font-size: 20px;
   cursor: pointer;
 }
-
-/* Styling the navigation bar */
+/* NAVIGATION BAR STYLING */
 nav .oui {
   width: 35px;
   height: 35px;
@@ -75,7 +81,6 @@ nav .oui {
   cursor: pointer;
   display: none;
 }
-
 nav .oui span {
   display: block;
   background: whitesmoke;
@@ -84,19 +89,15 @@ nav .oui span {
   transition: 0.3s;
   transition-property: transform, opacity;
 }
-
 nav .oui span:nth-child(2) {
   margin: 7px 0px;
 }
-
 nav .nav-list {
   list-style: none;
 }
-
 nav .nav-list li {
   display: inline-block;
 }
-
 nav .nav-list li a {
   display: inline-block;
   color: ghostwhite;
@@ -105,7 +106,6 @@ nav .nav-list li a {
   font-weight: 100;
   font-family: "Press Start 2p", sans-serif;
 }
-
 nav .nav-list li a:hover {
   color: #fac898;
   transition: 0.4s;
@@ -116,7 +116,9 @@ nav .nav-list li a:hover {
 .container {
   padding-top: 17%;
 }
-
+.container .intro-text {
+  margin-bottom: 40px;
+}
 .container .intro-text h2 {
   font-size: 40px;
   font-weight: 900;
@@ -124,13 +126,14 @@ nav .nav-list li a:hover {
   margin: 20px 0px 20px;
   color: whitesmoke;
 }
-
+span {
+  color: whitesmoke;
+}
 .container .intro-text h1 {
   color: whitesmoke;
   font-weight: 400;
   font-size: 17px;
 }
-
 .container .intro-text p {
   width: 550px;
   max-width: 100%;
@@ -139,12 +142,13 @@ nav .nav-list li a:hover {
   line-height: 1.5;
   margin-bottom: 30px;
 }
-
 /* Styling the Game Design Document (GDD) text */
 .gdd {
   padding-top: 100px;
 }
-
+.gdd .intro-text {
+  margin-bottom: 40px;
+}
 .gdd .intro-text h1 {
   font-size: 40px;
   font-weight: 900;
@@ -152,21 +156,18 @@ nav .nav-list li a:hover {
   margin: 20px 0px 0px;
   color: whitesmoke;
 }
-
 .gdd .intro-text h2 {
   color: whitesmoke;
   font-weight: 400;
   font-size: 15px;
   padding-bottom: 50px;
 }
-
 .gdd .intro-text h3 {
   color: whitesmoke;
   font-weight: 650;
   font-size: 20px;
   text-decoration: underline;
 }
-
 .gdd .intro-text p {
   width: 750px;
   max-width: 100%;
@@ -175,7 +176,6 @@ nav .nav-list li a:hover {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-
 /* Styling social media icons */
 .media a {
   width: 37px;
@@ -191,7 +191,6 @@ nav .nav-list li a:hover {
   background-color: rgba(104, 104, 104, 0.1);
   margin-bottom: 35px;
 }
-
 .media a:hover {
   transform: scale(1.1);
   background: ghostwhite;
@@ -210,7 +209,6 @@ nav .nav-list li a:hover {
   border-radius: 30px;
   cursor: pointer;
 }
-
 .container .intro-text button:hover {
   background: transparent;
   border: 2px solid ghostwhite;
@@ -229,7 +227,7 @@ nav .nav-list li a:hover {
   letter-spacing: 2px;
   font-size: 12px;
 }
-
+/* Styling the Game Design Document text */
 .designdoc {
   margin-top: 40px;
   padding-bottom: 15px;
@@ -240,7 +238,6 @@ nav .nav-list li a:hover {
   letter-spacing: 2px;
   font-size: 12px;
 }
-
 /* Styling the UI section */
 #ui {
   display: flex;
@@ -248,7 +245,6 @@ nav .nav-list li a:hover {
   justify-content: center;
   height: 100vh;
 }
-
 #canvas {
   background-color: black;
   outline: 2px solid #fff;
@@ -261,25 +257,20 @@ nav .nav-list li a:hover {
   nav .oui {
     display: initial;
   }
-
   .click {
     top: 46px;
   }
-
   .click span {
     position: absolute;
     margin-top: 12px;
   }
-
   .click span:first-child {
     transform: rotate(-40deg);
   }
-
   .click span:nth-child(2) {
     opacity: 0;
     margin: 0;
   }
-
   .click span:last-child {
     transform: rotate(40deg);
     top: 0;
@@ -301,11 +292,9 @@ nav .nav-list li a:hover {
     border-radius: 10px;
     margin-right: 2.5%;
   }
-
   nav .nav-list li {
     display: block;
   }
-
   nav .nav-list li a {
     display: block;
     text-align: center;
@@ -314,7 +303,6 @@ nav .nav-list li a:hover {
     margin-left: 0;
     margin-bottom: 40px;
   }
-
   nav .nav-list.open {
     right: 0;
   }
