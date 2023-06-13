@@ -78,3 +78,7 @@ Changelog for CS30 project, WebPong
 
 ### Fixed
 - Ball not speeding up on impact
+
+### Added
+- paddle.png
+- game.gif

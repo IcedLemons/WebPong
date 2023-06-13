@@ -6,8 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/f7317a6980.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f7317a6980.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="icon" type="image/x-icon" href="media/fav.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebPong</title>
@@ -15,49 +21,96 @@
   </head>
   <body class="bg">
     <div class="width">
-        <header>
-            <div class="logo">
-                <a href="home.html"><i class="fa-solid fa-laptop-code"></i></a>
-            </div>
-            <nav>
-                <div class="oui">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <ul class="nav-list">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="pong.html">Game</a></li>
-                    <li><a href="gdd.html">About</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="gdd">
-            <div class="intro-text">
-                <h1>Game Design Document</h1>
-                <hr>
-                <h2><em>Created by: <span class="input"></span></em></h2>
-                <h3>SYNOPSIS:</h3>
-                <p>A simple classic inteegrated in with a eye pleasing website. This version of pong is a tribute to an age old classic, a one of a kind game created to insipire others to explore and create their own.</p>
-                <h3>BALL FUNCTIONS:</h3>
-                <h3>PADDLE FUNCTIONS:</h3>
-                <h3>GAME BOX FUNCTIONS:</h3>
-            </div>
-            <div class="bottom">
-              <p>ツ  2022 Input - Made By BenC</p>
-          </div>
+      <header>
+        <div class="logo">
+          <a href="home.html"><i class="fa-solid fa-laptop-code"></i></a>
         </div>
+        <nav>
+          <div class="oui">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <ul class="nav-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="pong.html">Game</a></li>
+            <li><a href="gdd.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="gdd">
+        <div class="intro-text">
+          <h1>Game Design Document</h1>
+          <hr />
+          <h2>
+            <em>Created by: <span class="input"></span></em>
+          </h2>
+          <h3>SYNOPSIS:</h3>
+          <p>
+            A simple classic inteegrated in with a eye pleasing website. This
+            version of pong is a tribute to an age old classic, a one of a kind
+            game created to insipire others to explore and create their own.
+          </p>
+          <h3>BALL FUNCTIONS:</h3>
+          <p>
+            Ball.js contains the Ball class that represents a ball object in the
+            game.
+          </p>
+          <p>
+            It has properties for position, radius, velocity, and canvas height.
+            The update method updates the ball's position based on its velocity
+            and handles bouncing off the canvas boundaries. The draw method is
+            responsible for rendering the ball on the canvas. The createBall
+            function generates a new Ball object with random properties.
+          </p>
+          <img src="media/game.gif" alt="game" width="640" height="360" />
+          <br />
+          <br />
+          <h3>PADDLE FUNCTIONS:</h3>
+          <p>
+            paddle.js defines the Paddle class representing a paddle object in
+            the game.
+          </p>
+          <p>
+            This has properties for position, dimensions, velocity, paddle
+            speed, and canvas height. The draw method renders the paddle on the
+            canvas, and the update method updates its position based on
+            velocity. The class includes methods for controlling paddle movement
+            and checking if it's out of bounds.
+          </p>
+          <img src="media/paddle.png" alt="game" width="473" height="642" />
+          <br />
+          <br />
+          <h3>GAME LOGIC:</h3>
+          <p>
+            main.js serves as the entry point of the game. It imports the Paddle
+            class and createBall function.
+          </p>
+          <p>
+            Constants WIDTH and HEIGHT define the canvas size. Instances of
+            Paddle, score variables, and the ball object are created. The update
+            function handles game state updates and rendering. Keyboard input is
+            captured to control paddle movement. Additional functions handle
+            ball reset, collision detection, and increasing ball speed. WIDTH
+            and HEIGHT are exported for external use.
+          </p>
+          <hr />
+        </div>
+        <div class="designdoc">
+          <p>ツ 2022 Input - Made By BenC</p>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        var typed = new Typed(".input", {
-            strings:["Deepash Sunwar","Ben Chu","Salman Khan"],
-            typeSpeed: 65,
-            backSpeed: 60,
-            loop:true
-        })
+      var typed = new Typed(".input", {
+        strings: ["Deepash Sunwar", "Ben Chu", "Salman Khan"],
+        typeSpeed: 65,
+        backSpeed: 60,
+        loop: true,
+      });
     </script>
   </body>
 </html>
