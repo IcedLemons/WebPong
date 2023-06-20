@@ -9,6 +9,12 @@
  A web based pong game where the website will contain
  the documentation for both the game and the website. The website itself will be made in html and css
  while the pong game will be in javascript.
+
+ ## Creation
+ Since we don't have experience creating games in js, we will first be starting off with research of already
+ existing examples, however this will only be to learn the general game logic and classes and functions required
+ for a pong game. As the project progresses however the logic will change with it as by then we will have a grasp and
+ understanding of the functionalities of a web based ping pong game.
  
  ## Look alikes?
  There are currently thousands of webbased pong games, with the classic being the most common. Though our main game will include this version of pong,
