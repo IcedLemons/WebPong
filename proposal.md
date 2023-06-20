@@ -17,8 +17,8 @@
  understanding of the functionalities of a web based ping pong game.
  
  ## Look alikes?
- There are currently thousands of webbased pong games, with the classic being the most common. Though our main game will include this version of pong,
- it will be made by us, integrated into the website design aswell.
+ There are currently thousands of webbased pong games, with the classic being the most common. Though our main game will  include this version of pong,
+ it will be made by us, integrated into the website design aswell. However some functiosn must be the same otherwise the game will not function as all pong games have a general similarity. (Sources)
  
 ## Need to have's
 | Rank |                      Required                        |
@@ -27,7 +27,7 @@
 |     2| Player vs Player pong gameplay                       |
 |     3| Interactable objects on the website like buttons etc |
 |     4| Readable and easy to navigate web design             |
-|     5| Scoreboard       |
+|     5| Scoreboard                                           |
 
 ## Nice to have's
 | Rank |             Optional             |
